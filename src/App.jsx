@@ -14,17 +14,16 @@ const App = () => {
   const [view, setView] = useState('cover'); // 'cover' or 'guide'
   const [activeTab, setActiveTab] = useState('checklist');
   
-  // 行前準備清單
+  // 行前準備清單 (已更新為最新版本)
   const [checkedItems, setCheckedItems] = useState({
-    '重要證件：護照 & 72hrs前填電子入境卡': false,
+    '重要證件：護照 (含收納袋) & 72hrs前填電子入境卡': false,
     '駕照正本：國際駕照 & 台灣汽車、機車駕照': false,
-    '旅費保障：台幣 10000 & 旅遊險': false,
-    '預約確認：Klook 買票 & Catch table 訂位': false,
-    '離線檔案：下載 Airbnb、機票、租車檔案': false,
+    '旅費保障：台幣 10000、安達旅遊險、台新Pay著刷': false,
+    '預約與檔案：Klook買票、Catch Table訂位及離線檔案(Airbnb/機票/租車)': false,
     '網路支付：Wowpass (下載/儲值/綁定) & Sim卡*2': false,
-    '3C 配件：行充*2、插頭*2、轉接頭*2、原廠線*2 & 各種線': false,
-    '行李保安：絕緣膠帶、行李束帶、行李扣環': false,
-    '盥洗免洗：可淘汰的內衣褲、襪子、牙刷': false
+    '3C 配件：行動電源*2、插頭*2、轉接頭*2、原廠線*2 & 各種線': false,
+    '行李保安：絕緣膠帶、夾鏈袋、行李束帶、行李扣環': false,
+    '生活盥洗：袖珍面紙、洗衣精、可淘汰的內衣褲/襪子/牙刷': false
   });
 
   // 行程中任務狀態
@@ -83,7 +82,7 @@ const App = () => {
       title: 'DAY 2 (03/24) Tue.',
       subtitle: '絕景跳島與海洋血拼日',
       icon: '⛰️',
-      dailyNote: '♦️ 重要提醒：帶護照正本、臺駕照、國際駕照！今天會一直曬太陽，請記得補充水分唷 💦',
+      dailyNote: '♦️ 重要提醒：帶護照正本、臺駕照、國際駕照！今天會一直曬太陽，請記得補充水分唷 💦 💕 今日穿搭：Roots情侶衣 + 卡其色下身',
       schedule: [
         { 
           time: '08:00', 
@@ -129,7 +128,7 @@ const App = () => {
           time: '20:00', 
           activity: '逛街血拼去 🛍️', 
           hasExtraNote: 'shopping_day2',
-          detail: '七星街買北鼻衣服、大創採購、尋找 Gentle Monster 墨鏡！' 
+          detail: '七星街採購北鼻的衣服、買墨鏡 ❗️ 記得買卸妝水、洗衣精！' 
         }
       ]
     },
@@ -138,12 +137,12 @@ const App = () => {
       title: 'DAY 3 (03/25) Wed.',
       subtitle: '櫻花海景與紀念寫真',
       icon: '🌸',
-      dailyNote: '♦️ 重要提醒：今天下午要去攝影棚，記得穿得漂漂亮亮！一早出發拍櫻花，充滿仙氣的一天開始囉 ✨',
+      dailyNote: '💕 攝影棚穿搭重點：推薦皮衣、蕾絲、粗針織、絲綢或丹寧，深色外套搭配淺色內搭。🈲 絕對避免全灰階 (ex. 灰色配淺卡其)！',
       schedule: [
         { 
           time: '07:30', 
           activity: '典農路賞櫻 🌸', 
-          detail: '趕在 08:00 前抵達，捕捉沒有人的絕美櫻花空景！' 
+          detail: '早上 08:00 前抵達，捕捉沒有人的絕美櫻花空景！' 
         },
         { 
           time: '08:30', 
@@ -163,7 +162,7 @@ const App = () => {
         { 
           time: '14:30', 
           activity: 'Tempus Cafe ☕️', 
-          detail: '月汀里無敵海景，必喝招牌橘子咖啡放鬆一下！' 
+          detail: '月汀里看海景，必喝招牌橘子咖啡放鬆一下！' 
         },
         { 
           time: '16:00', 
@@ -185,7 +184,7 @@ const App = () => {
           time: '20:00', 
           activity: 'Donsadon 豚似豚 돈사돈 🍴', 
           hasExtraNote: 'donsadon_south',
-          detail: '📍南部分店。12:00-21:30 (📅 網路預約 / 週二公休)。' 
+          detail: '📍南部分店。12:00-21:30 (📅 網路預約 / 週二公休)。♦️ 結束後回民宿記得洗衣服！' 
         }
       ]
     },
@@ -194,7 +193,7 @@ const App = () => {
       title: 'DAY 4 (03/26) Thu.',
       subtitle: '極速飆風與絕美日落',
       icon: '🏎️',
-      dailyNote: '♦️ 重要提醒：今晚要準備整理行李囉！白天去玩刺激的賽車，傍晚選個好位子吃鹽麵包看夕陽 🌅',
+      dailyNote: '♦️ 重要提醒：今晚要準備整理行李囉！白天去玩刺激的賽車，傍晚選個好位子吃鹽麵包看夕陽 🌅 💕 今日穿搭：推薦行動方便的褲裝！',
       schedule: [
         { 
           time: '11:00', 
@@ -229,7 +228,7 @@ const App = () => {
         { 
           time: '20:30', 
           activity: '偶來市場 🛍️', 
-          detail: '最後的掃街！可以再逛一次把想吃的、想買的補齊。' 
+          detail: '最後的掃街！可以再逛一次把想吃的、想買的補齊。♦️ 結束後回民宿記得整理行李！' 
         }
       ]
     },
@@ -238,18 +237,23 @@ const App = () => {
       title: 'DAY 5 (03/27) Fri.',
       subtitle: '地質奇觀與文化根脈',
       icon: '🏛️',
-      dailyNote: '🧳 退房 Sodam 後開啟知性之旅。💕 今日行程涵蓋了濟州的地質學與建國神話，讓我們在風景中讀懂這座島嶼的歷史。',
+      dailyNote: '🧳 11:00前 check out Sodam Pension。💕 穿搭提醒：今天跟風景拍照，要穿漂亮一點喔 (ex. 紅白奶茶色系)！',
       schedule: [
         { 
           time: '10:30', 
           activity: '退房 Sodam Pension 🧳', 
-          detail: '檢查行李，準備往市區移動。' 
+          detail: '11:00 前 check out，準備往市區移動。' 
         },
         { 
           time: '11:30', 
           activity: '山房山 油菜花海 🌼', 
           hasExtraNote: 'sanbangsan_edu',
-          detail: '🎟️ 現金門票 2,000 ₩。世界地質公園，春季必拍的壯觀背景。' 
+          detail: '🎟️ 需門票 2,000 韓幣。春季必拍的壯觀背景！' 
+        },
+        { 
+          time: '12:30', 
+          activity: '梨湖 海邊小馬燈塔 📷', 
+          detail: '紅白小馬象徵濟州「喬馬」文化的傳承，超級可愛。' 
         },
         { 
           time: '13:30', 
@@ -258,41 +262,36 @@ const App = () => {
           taskId: 'sisters_reservation',
           taskText: '08:20 網路預約成功',
           hasExtraNote: 'sisters_noodle',
-          detail: '濟州必嚐傳統飲食：豬肉湯麵文化。' 
+          detail: '濟州必嚐傳統飲食：豬肉湯麵、拌麵與白切肉！' 
         },
         { 
           time: '15:00', 
           activity: '三姓穴 삼성혈 🌸', 
           hasExtraNote: 'samseonghyeol_edu',
-          detail: '指定文化財第134號，探究耽羅王國的發祥史。' 
+          detail: '🎟️ 需門票 4,000 韓幣 / 09:00-18:00。網路說下午去比較好拍櫻花，都可！' 
         },
         { 
           time: '16:30', 
           activity: '濟州牧 官衙 🏯', 
           hasExtraNote: 'mokgwanga_edu',
-          detail: '🎟️ 需門票 / 了解朝鮮時代濟州政治與行政組織的關鍵遺址。' 
+          detail: '🎟️ 需門票 / 09:00-18:00 / 預計停留一小時。' 
         },
         { 
           time: '17:30', 
-          activity: 'The Islander & 七星街 🛍️', 
+          activity: 'The Islander & 七星購物街 🛍️', 
           hasExtraNote: 'the_islander',
-          detail: '逛街採買，觀察當地商業區發展。' 
+          detail: '10:30-19:00。逛街採買，極推香水當伴手禮！' 
         },
         { 
           time: '18:30', 
-          activity: '梨湖 海邊小馬燈塔 📷', 
-          detail: '紅白小馬象徵濟州「喬馬」文化的傳承。' 
-        },
-        { 
-          time: '19:30', 
           activity: '入住 Villa de Aewol 🏠', 
           detail: 'Check-in 後稍作休息，準備晚餐。' 
         },
         { 
-          time: '20:00', 
+          time: '19:30', 
           activity: 'Wonwoojeong 韓牛 🥩', 
           hasExtraNote: 'wonwoojeong',
-          detail: '犒賞級饗宴，注意生冷醬蟹的食用提醒。' 
+          detail: '15:30-21:00。犒賞級饗宴，記得點排骨大醬湯，小菜醬蟹不要吃！' 
         }
       ]
     },
@@ -304,28 +303,34 @@ const App = () => {
       dailyNote: '🛍️ 把握在濟州島的最後一個完整白天！今天走悠閒文青路線，買買可愛小物、喝喝咖啡，享受愜意時光 ☕️',
       schedule: [
         { 
-          time: '09:00', 
-          activity: '海螺湯麵 🍴', 
-          hasExtraNote: 'conch_noodle',
-          detail: '08:00-15:00。道地美味，開啟活力的一天！' 
-        },
-        { 
           time: '11:00', 
           activity: 'mumujeju 選物店 🎁', 
           hasExtraNote: 'mumujeju',
           detail: '11:00-18:00 (週四五公休)。濟州島必逛的超萌文創小店！' 
         },
         { 
-          time: '13:30', 
+          time: '13:00', 
+          activity: '海螺湯麵 🍴', 
+          hasExtraNote: 'conch_noodle',
+          detail: '08:00-15:00。道地美味，蒸餃必點！' 
+        },
+        { 
+          time: '14:30', 
           activity: '麗芬聚 🍴', 
           hasExtraNote: 'lifenju',
           detail: '📅 記得一定要提前預約喔！' 
         },
         { 
-          time: '15:30', 
+          time: '16:00', 
           activity: '逛街伴手禮 & 咖啡廳 ☕️', 
           hasExtraNote: 'last_shopping',
           detail: '把握最後時間採買伴手禮，找間美美的咖啡廳坐著放空。' 
+        },
+        {
+          time: '📌:筆記',
+          activity: '遺珠之憾口袋名單 🔖',
+          hasExtraNote: 'missed_spots',
+          detail: '這次排不進去的景點先存起來，成為下次再訪濟州島的最佳理由！'
         }
       ]
     },
@@ -613,7 +618,7 @@ const App = () => {
                            <ul className="space-y-2 sm:space-y-1.5 leading-relaxed bg-white p-2.5 md:p-3.5 rounded-xl border border-blue-200">
                               <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-blue-500 mt-[1px]">🔹</span> <span className="break-words"><b>購票：</b>來回 8,500₩ (去5千/回3千5)。務必帶<b>護照正本</b>查驗！</span></li>
                               <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-blue-500 mt-[1px]">🔹</span> <span className="break-words"><b>表單：</b>乘船申請書一次填<b> 2 張</b>。搭船時需出示<b>船票＋申請書</b>。</span></li>
-                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-blue-500 mt-[1px]">🔹</span> <span className="break-words"><b>船班：</b>約半小時一班。下牛木洞港末班較早，請抓 <b className="text-red-500">16:00 為末班船</b>！</span></li>
+                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-blue-500 mt-[1px]">🔹</span> <span className="break-words"><b>船班：</b>約半小時一班。務必確認 <b className="text-red-500">最晚船班❓</b> (建議抓 16:00 前)</span></li>
                            </ul>
                         </div>
                       )}
@@ -638,9 +643,9 @@ const App = () => {
                         <div className="mt-3 md:mt-4 p-4 md:p-5 bg-pink-50 rounded-[1rem] md:rounded-2xl border-2 border-pink-100 relative overflow-hidden shadow-sm">
                            <h5 className="font-black text-pink-600 mb-3 flex items-center text-sm"><ShoppingBag className="w-4 h-4 mr-1 flex-shrink-0" /> 逛街血拼攻略 🛍️</h5>
                            <ul className="space-y-2 text-xs font-bold text-pink-700/80 bg-white p-3 rounded-[1rem] border border-pink-200">
-                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-pink-400 mt-[1px]">✨</span> <span className="break-words"><b>七星街：</b>採購北鼻的衣服 ❗️</span></li>
+                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-pink-400 mt-[1px]">✨</span> <span className="break-words"><b>七星街：</b>採購北鼻衣服、買墨鏡 ❗️ (加買卸妝水、洗衣精)</span></li>
                               <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-pink-400 mt-[1px]">✨</span> <span className="break-words"><b>大創 DAISO：</b>營業時間 10:00-22:00。</span></li>
-                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-pink-400 mt-[1px]">✨</span> <span className="break-words"><b>Gentle Monster：</b>想買墨鏡可至 新羅免稅店 2F 或 樂天免稅店 1F。</span></li>
+                              <li className="grid grid-cols-[auto_1fr] gap-x-2"><span className="text-pink-400 mt-[1px]">✨</span> <span className="break-words"><b>Gentle Monster：</b>買墨鏡可至 新羅免稅店 2F 或 樂天免稅店 1F。</span></li>
                            </ul>
                         </div>
                       )}
@@ -1024,6 +1029,28 @@ const App = () => {
                                 <div className="flex flex-col gap-0.5">
                                    <span className="font-black text-amber-500">放空時光</span>
                                    <span className="font-bold text-amber-700 leading-relaxed break-words">找間有海景或質感的咖啡廳坐坐，回味這幾天的美好。</span>
+                                </div>
+                              </li>
+                           </ul>
+                        </div>
+                      )}
+
+                      {item.hasExtraNote === 'missed_spots' && (
+                        <div className="mt-3 md:mt-4 p-3 md:p-4 bg-purple-50 rounded-[1rem] md:rounded-2xl border-2 border-purple-100 text-xs font-bold text-purple-800 shadow-sm">
+                           <h5 className="font-black text-purple-600 mb-2 flex items-center text-sm"><Bookmark className="w-4 h-4 mr-1 flex-shrink-0" /> 下次必去清單 🔖</h5>
+                           <ul className="bg-white p-2.5 md:p-3.5 rounded-xl border border-purple-200 shadow-sm">
+                              <li className="grid grid-cols-[auto_1fr] gap-x-2 border-b border-purple-50 pb-2 mb-2 last:border-0 last:pb-0 last:mb-0">
+                                <span className="w-5 text-center mt-[1px]">🌳</span> 
+                                <div className="flex flex-col gap-0.5">
+                                   <span className="font-black text-purple-500">秘密樹林</span>
+                                   <span className="font-bold text-purple-700 leading-relaxed break-words">營業時間：09:00-17:00</span>
+                                </div>
+                              </li>
+                              <li className="grid grid-cols-[auto_1fr] gap-x-2 border-b border-purple-50 pb-2 mb-2 last:border-0 last:pb-0 last:mb-0">
+                                <span className="w-5 text-center mt-[1px]">💧</span> 
+                                <div className="flex flex-col gap-0.5">
+                                   <span className="font-black text-purple-500">清水塘</span>
+                                   <span className="font-bold text-purple-700 leading-relaxed break-words">營業時間：11:00-21:00</span>
                                 </div>
                               </li>
                            </ul>
